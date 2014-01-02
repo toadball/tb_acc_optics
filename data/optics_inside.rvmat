@@ -56,5 +56,5 @@ class Stage4
 };
 class StageTI
 {
-	texture="CA\weapons_E\Data\Default_TI_CA.tga";
+	texture="tb_acc_optics\data\Default_TI_CA.paa";
 };

@@ -11,15 +11,15 @@ class CfgPatches
 };
 
 class CfgWeapons {
-	class ItemCore;
+	class optic_MRCO;
 	class InventoryOpticsItem_Base_F;
-	class tb_acc_mk4CQT: ItemCore {
+	class tb_acc_mk4CQT: optic_MRCO {
 		scope = 2;
 		displayName = "Mk4 CQ/T";
 		descriptionShort ="Mk4 CQ/T<br/>Magnification: 1x-3x";
-		picture = "\A3\weapons_F_beta\Data\UI\gear_acco_MRCO_CA.paa";
+		picture = "\tb_acc_optics\data\w_mk4_ca.paa";
 		model = "\tb_acc_optics\acc_mk4";
-		weaponInfoType = "RscOptics_sos";
+		weaponInfoType = "";
 		class ItemInfo: InventoryOpticsItem_Base_F
 		{
 			mass = 7;
