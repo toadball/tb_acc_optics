@@ -1,13 +1,11 @@
-class CfgPatches
-{
- class tb_acc_optics
- {
-	requiredaddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
-	requiredversion = 0.1;
-	units[] = {};
-	weapons[] = {"tb_acc_mk4CQT"};
-	magazines[] = {};
- };
+class CfgPatches {
+	class tb_acc_optics {
+		requiredaddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
+		requiredversion = 0.1;
+		units[] = {};
+		weapons[] = {"tb_acc_mk4CQT"};
+		magazines[] = {};
+	};
 };
 
 class CfgWeapons {
@@ -20,14 +18,11 @@ class CfgWeapons {
 		picture = "\tb_acc_optics\data\w_mk4_ca.paa";
 		model = "\tb_acc_optics\acc_mk4";
 		weaponInfoType = "";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
+		class ItemInfo: InventoryOpticsItem_Base_F {
 			mass = 7;
 			modelOptics = "\tb_acc_optics\MK4_Illum_optic_4x";
-			class OpticsModes
-			{
-				class Mk4 // 3x zoom
-				{
+			class OpticsModes {
+				class Mk4 { // 3x zoom
 					opticsID = 1;
 					useModelOptics = true;
 					opticsPPEffects[]={"OpticsCHAbera1","OpticsBlur1"};
@@ -42,8 +37,7 @@ class CfgWeapons {
 					distanceZoomMax=300;
 					cameraDir = "";
 				};
-				class Kolimator:Mk4
-				{
+				class Kolimator: Mk4 {
 					opticsID = 2;
 					useModelOptics = false;
 					opticsFlare = false;
