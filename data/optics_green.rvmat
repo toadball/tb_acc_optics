@@ -1,92 +1,82 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 4.17
-//Fri Dec 06 00:23:46 2013 : Source 'file' date Fri Dec 06 00:23:46 2013
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
-#define _ARMA_
-
-//Class weapons_e : Data\optics_green.rvmat{
-ambient[] = {1,1,0.83100003,1};
-diffuse[] = {1,1,0.83100003,1};
-forcedDiffuse[] = {0.74100006,1,0.86199987,1};
-emmisive[] = {0,0,0,1};
-specular[] = {1,1,0.9999999,1};
-specularPower = 500;
-PixelShaderID = "Super";
-VertexShaderID = "Super";
+class StageTI
+{
+	texture="ca\weapons_e\data\default_ti_ca.paa";
+};
+ambient[]={1,1,0.83100003,1};
+diffuse[]={1,1,0.83100003,1};
+forcedDiffuse[]={0.74100006,1,0.86199987,1};
+emmisive[]={0,0,0,1};
+specular[]={1,1,0.99999988,1};
+specularPower=500;
+PixelShaderID="Super";
+VertexShaderID="Super";
 class Stage1
 {
-	texture = "ca\weapons_e\data\optics_nohq.paa";
-	uvSource = "tex1";
+	texture="tb_acc_optics\data\optics_nohq.paa";
+	uvSource="tex1";
 	class uvTransform
 	{
-		aside[] = {1,0,0};
-		up[] = {0,1,0};
-		dir[] = {0,0,0};
-		pos[] = {0,0,0};
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
 class Stage2
 {
-	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,0.5,DT)";
-	uvSource = "tex";
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,0.5,DT)";
+	uvSource="tex";
 	class uvTransform
 	{
-		aside[] = {1,0,0};
-		up[] = {0,1,0};
-		dir[] = {0,0,0};
-		pos[] = {0,0,0};
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
 class Stage3
 {
-	texture = "#(argb,8,8,3)color(1,1,1,0.0,MC)";
-	uvSource = "tex";
+	texture="#(argb,8,8,3)color(1,1,1,0.0,MC)";
+	uvSource="tex";
 	class uvTransform
 	{
-		aside[] = {1,0,0};
-		up[] = {0,1,0};
-		dir[] = {0,0,0};
-		pos[] = {0,0,0};
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
 class Stage4
 {
-	texture = "#(argb,8,8,3)color(1,1,1,1,AS)";
-	uvSource = "tex";
+	texture="#(argb,8,8,3)color(1,1,1,1,AS)";
+	uvSource="tex";
 	class uvTransform
 	{
-		aside[] = {1,0,0};
-		up[] = {0,1,0};
-		dir[] = {0,0,0};
-		pos[] = {0,0,0};
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
 class Stage5
 {
-	texture = "#(rgb,8,8,3)color(1,1,1,1,SMDI)";
-	uvSource = "tex";
+	texture="#(rgb,8,8,3)color(1,1,1,1,SMDI)";
+	uvSource="tex";
 	class uvTransform
 	{
-		aside[] = {1,0,0};
-		up[] = {0,1,0};
-		dir[] = {0,0,0};
-		pos[] = {0,0,0};
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
 	};
 };
 class Stage6
 {
-	texture = "#(ai,128,128,1)fresnel(0.915,0.38)";
-	uvSource = "none";
+	texture="#(ai,128,128,1)fresnel(0.915,0.38)";
+	uvSource="none";
 };
 class Stage7
 {
-	texture = "ca\data\env_land_optic_co.paa";
-	uvSource = "none";
+	texture="tb_acc_optics\data\env_land_optic_co.paa";
+	uvSource="none";
 };
-class StageTI
-{
-	texture = "ca\weapons_e\data\default_ti_ca.paa";
-};
-//};
