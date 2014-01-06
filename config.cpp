@@ -3,7 +3,7 @@ class CfgPatches {
 		requiredaddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
 		requiredversion = 0.1;
 		units[] = {};
-		weapons[] = {"tb_acc_mk4CQT"};
+		weapons[] = {"tb_acc_mk4CQT","tb_acc_m145","tb_acc_compM4"};
 		magazines[] = {};
 	};
 };
@@ -11,6 +11,7 @@ class CfgPatches {
 class CfgWeapons {
 	class optic_MRCO;
 	class optic_Arco;
+	class optic_Holosight;
 	class InventoryOpticsItem_Base_F;
 	class tb_acc_mk4CQT: optic_MRCO {
 		scope = 2;
@@ -76,6 +77,36 @@ class CfgWeapons {
 					opticszoommin = 0.0732;
 					usemodeloptics = 1;
 					visionmode[] = {"Normal"};
+				};
+			};
+		};
+	};
+	class tb_acc_compM4 : optic_Holosight {
+		descriptionshort = "Aimpoint CompM4<br/>Magnification: 1x";
+		displayname = "Aimpoint CompM4";
+		model = "\tb_acc_optics\acc_compM4";
+		picture = "\tb_acc_optics\data\ico\w_compM4_ca.paa";
+		scope = 2;
+		weaponinfotype = "RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F {
+			mass = 3;
+			modeloptics = "\A3\Weapons_F\empty";
+			optics = 1;
+			class OpticsModes {
+				class compM4 {
+					cameradir = "";
+					distancezoommax = 200;
+					distancezoommin = 200;
+					memorypointcamera = "eye";
+					opticsdisableperipherialvision = 0;
+					opticsflare = 0;
+					opticsid = 1;
+					opticsppeffects[] = {"OpticsBlur1"};
+					opticszoominit = 0.75;
+					opticszoommax = 1.1;
+					opticszoommin = 0.375;
+					usemodeloptics = 0;
+					visionmode[] = {};
 				};
 			};
 		};
