@@ -10,12 +10,13 @@ class CfgPatches {
 
 class CfgWeapons {
 	class optic_MRCO;
+	class optic_Arco;
 	class InventoryOpticsItem_Base_F;
 	class tb_acc_mk4CQT: optic_MRCO {
 		scope = 2;
 		displayName = "Mk4 CQ/T";
 		descriptionShort ="Mk4 CQ/T<br/>Magnification: 1x-3x";
-		picture = "\tb_acc_optics\data\w_mk4_ca.paa";
+		picture = "\tb_acc_optics\data\ico\w_mk4_ca.paa";
 		model = "\tb_acc_optics\acc_mk4";
 		weaponInfoType = "";
 		class ItemInfo: InventoryOpticsItem_Base_F {
@@ -47,6 +48,34 @@ class CfgWeapons {
 					opticsZoomInit=0.5;
 					memoryPointCamera = "eye";
 					visionMode[] = {};
+				};
+			};
+		};
+	};
+	class tb_acc_m145 : optic_Arco {
+		descriptionshort = "Elcan M145<br/>Magnification: 3.4x";
+		weaponinfotype = "RscWeaponZeroing";
+		picture = "\tb_acc_optics\data\ico\w_m145_ca.paa";
+		model = "\tb_acc_optics\acc_m145";
+		displayname = "M145";
+		class ItemInfo: InventoryOpticsItem_Base_F {
+			mass = 7;
+			modelOptics = "\tb_acc_optics\M145";
+			class OpticsModes {
+				class M145 {
+					cameradir = "";
+					distancezoommax = 300;
+					distancezoommin = 300;
+					memorypointcamera = "opticView";
+					opticsdisableperipherialvision = 1;
+					opticsflare = 1;
+					opticsid = 1;
+					opticsppeffects[] = {"OpticsCHAbera1", "OpticsBlur1"};
+					opticszoominit = 0.0732;
+					opticszoommax = 0.0732;
+					opticszoommin = 0.0732;
+					usemodeloptics = 1;
+					visionmode[] = {"Normal"};
 				};
 			};
 		};
