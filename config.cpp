@@ -3,7 +3,7 @@ class CfgPatches {
 		requiredaddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
 		requiredversion = 0.1;
 		units[] = {};
-		weapons[] = {"tb_acc_mk4CQT","tb_acc_m145","tb_acc_compM4"};
+		weapons[] = {"tb_acc_mk4CQT","tb_acc_m145","tb_acc_ta31","tb_acc_compM4"};
 		magazines[] = {};
 	};
 };
@@ -49,6 +49,46 @@ class CfgWeapons {
 					opticsZoomInit=0.5;
 					memoryPointCamera = "eye";
 					visionMode[] = {};
+				};
+			};
+		};
+	};
+	class optic_Hamr;
+	class tb_acc_ta31 : optic_Hamr {
+		displayName = "Trijicon Ta31";
+		descriptionshort = "Trijicon Ta31<br/>Magnification: 4x";
+		weaponinfotype = "RscWeaponZeroing";
+		picture = "\tb_acc_optics\data\ico\w_ta31_ca.paa";
+		model = "\tb_acc_optics\acc_ta31";
+		class ItemInfo: InventoryOpticsItem_Base_F {
+			mass = 7;
+			modelOptics = "\tb_acc_optics\ACOG_TA31_optic_4x";
+			class OpticsModes {
+				class ACOG {
+					cameradir = "";
+					distancezoommax = 300;
+					distancezoommin = 300;
+					memorypointcamera = "opticView";
+					opticsdisableperipherialvision = 1;
+					opticsflare = 1;
+					opticsid = 1;
+					opticsppeffects[] = {"OpticsCHAbera1", "OpticsBlur1"};
+					opticszoominit = 0.0623;
+					opticszoommax = 0.0623;
+					opticszoommin = 0.0623;
+					usemodeloptics = 1;
+					visionmode[] = {"Normal"};
+				};
+				class Kolimator: ACOG {
+					memorypointcamera = "eye";
+					opticsdisableperipherialvision = 0;
+					opticsflare = 0;
+					opticsid = 2;
+					opticszoominit = 0.8;
+					opticszoommax = 1.5;
+					opticszoommin = 0.25;
+					usemodeloptics = 0;
+					visionmode[] = {};
 				};
 			};
 		};
