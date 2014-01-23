@@ -3,7 +3,7 @@ class CfgPatches {
 		requiredaddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
 		requiredversion = 0.1;
 		units[] = {};
-		weapons[] = {"tb_acc_mk4CQT","tb_acc_m145","tb_acc_ta31","tb_acc_compM4"};
+		weapons[] = {"tb_acc_mk4CQT","tb_acc_m145","tb_acc_ta31","tb_acc_compM4","tb_acc_c79"};
 		magazines[] = {};
 	};
 };
@@ -118,6 +118,18 @@ class CfgWeapons {
 					usemodeloptics = 1;
 					visionmode[] = {"Normal"};
 				};
+			};
+		};
+	};
+	class tb_acc_c79 : tb_acc_m145 {
+		descriptionshort = "Elcan C79<br/>Magnification: 3.4x";
+		picture = "\tb_acc_optics\data\ico\w_c79_ca.paa";
+		model = "\tb_acc_optics\acc_c79";
+		displayname = "C79";
+		class ItemInfo: ItemInfo {
+			modelOptics = "\tb_acc_optics\C79";
+			class OpticsModes : OpticsModes {
+				class C79 : M145 {};
 			};
 		};
 	};
