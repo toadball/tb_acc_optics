@@ -20,6 +20,7 @@ class CfgWeapons {
 		picture = "\tb_acc_optics\data\ico\w_mk4_ca.paa";
 		model = "\tb_acc_optics\acc_mk4";
 		weaponInfoType = "";
+		scope = 0;
 		class ItemInfo: InventoryOpticsItem_Base_F {
 			mass = 7;
 			modelOptics = "\tb_acc_optics\MK4_Illum_optic_4x";
@@ -60,6 +61,7 @@ class CfgWeapons {
 		weaponinfotype = "RscWeaponZeroing";
 		picture = "\tb_acc_optics\data\ico\w_ta31_ca.paa";
 		model = "\tb_acc_optics\acc_ta31";
+		scope = 0;
 		class ItemInfo: InventoryOpticsItem_Base_F {
 			mass = 7;
 			modelOptics = "\tb_acc_optics\ACOG_TA31_optic_4x";
@@ -99,6 +101,7 @@ class CfgWeapons {
 		picture = "\tb_acc_optics\data\ico\w_m145_ca.paa";
 		model = "\tb_acc_optics\acc_m145";
 		displayname = "M145";
+		scope =2;
 		class ItemInfo: InventoryOpticsItem_Base_F {
 			mass = 7;
 			modelOptics = "\tb_acc_optics\M145";
