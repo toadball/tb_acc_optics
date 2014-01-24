@@ -14,13 +14,12 @@ class CfgWeapons {
 	class optic_Holosight;
 	class InventoryOpticsItem_Base_F;
 	class tb_acc_mk4CQT: optic_MRCO {
-		scope = 2;
+		scope = 0;
 		displayName = "Mk4 CQ/T";
 		descriptionShort ="Mk4 CQ/T<br/>Magnification: 1x-3x";
 		picture = "\tb_acc_optics\data\ico\w_mk4_ca.paa";
 		model = "\tb_acc_optics\acc_mk4";
 		weaponInfoType = "";
-		scope = 0;
 		class ItemInfo: InventoryOpticsItem_Base_F {
 			mass = 7;
 			modelOptics = "\tb_acc_optics\MK4_Illum_optic_4x";
