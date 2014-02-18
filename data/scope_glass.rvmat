@@ -1,6 +1,6 @@
 class StageTI
 {
-	texture="ca\weapons_e\data\default_ti_ca.paa";
+	texture="tb_acc_optics\data\default_ti_ca.paa";
 };
 ambient[]={1,1,1,1};
 diffuse[]={1,1,1,1};

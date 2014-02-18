@@ -60,7 +60,7 @@ class CfgWeapons {
 		weaponinfotype = "RscWeaponZeroing";
 		picture = "\tb_acc_optics\data\ico\w_ta31_ca.paa";
 		model = "\tb_acc_optics\acc_ta31";
-		scope = 0;
+		scope = 2;
 		class ItemInfo: InventoryOpticsItem_Base_F {
 			mass = 7;
 			modelOptics = "\tb_acc_optics\ACOG_TA31_optic_4x";
