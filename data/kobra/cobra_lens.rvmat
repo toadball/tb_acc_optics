@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.17
+//Fri Dec 06 00:23:45 2013 : Source 'file' date Fri Dec 06 00:23:45 2013
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class weapons_e : AK\data\cobra_lens.rvmat{
+ambient[] = {0.0,100.0,0.0,1.0};
+diffuse[] = {0.0,0.0,0.0,1.0};
+forcedDiffuse[] = {1.0,1.0,1.0,0.0};
+emmisive[] = {1.0,1.0,1.0,1.0};
+specular[] = {0.0,0.0,0.0,1.0};
+specularPower = 1.0;
+renderFlags[] = {"AddBlend"};
+PixelShaderID = "Normal";
+VertexShaderID = "Basic";
+//};

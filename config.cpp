@@ -3,12 +3,13 @@ class CfgPatches {
 		requiredaddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
 		requiredversion = 0.1;
 		units[] = {};
-		weapons[] = {"tb_acc_mk4CQT","tb_acc_m145","tb_acc_ta31","tb_acc_compM4","tb_acc_c79"};
+		weapons[] = {"tb_acc_mk4CQT","tb_acc_m145","tb_acc_ta31","tb_acc_compM4","tb_acc_c79","tb_acc_kobra"};
 		magazines[] = {};
 	};
 };
 
 class CfgWeapons {
+	class ItemCore;
 	class optic_MRCO;
 	class optic_Arco;
 	class optic_Holosight;
@@ -104,6 +105,7 @@ class CfgWeapons {
 		class ItemInfo: InventoryOpticsItem_Base_F {
 			mass = 7;
 			modelOptics = "\tb_acc_optics\M145";
+
 			class OpticsModes {
 				class M145 {
 					cameradir = "";
@@ -120,6 +122,17 @@ class CfgWeapons {
 					usemodeloptics = 1;
 					visionmode[] = {"Normal"};
 				};
+				class CQB: M145 {
+					memorypointcamera = "eye";
+					opticsdisableperipherialvision = 0;
+					opticsflare = 0;
+					opticsid = 2;
+					opticszoominit = 0.8;
+					opticszoommax = 1.5;
+					opticszoommin = 0.25;
+					usemodeloptics = 0;
+					visionmode[] = {};
+				};
 			};
 		};
 	};
@@ -130,8 +143,13 @@ class CfgWeapons {
 		displayname = "C79";
 		class ItemInfo: ItemInfo {
 			modelOptics = "\tb_acc_optics\C79";
+			
 			class OpticsModes : OpticsModes {
-				class C79 : M145 {};
+				class C79 : M145 {
+					discreteDistance[] = {200,300,400,500,600,700,800};
+					discreteDistanceInitIndex = 0;
+				};
+				class CQB : CQB {};
 			};
 		};
 	};
@@ -165,4 +183,97 @@ class CfgWeapons {
 			};
 		};
 	};
+	class tb_acc_kobra : optic_Holosight {	
+		descriptionshort = "Kobra Red Dot Sight<br/>Magnification: 1x";
+		displayname = "Kobra";
+		model = "\tb_acc_optics\acc_kobra";
+		picture = "\tb_acc_optics\data\ico\w_kobra_ca.paa";
+		scope = 2;
+		weaponinfotype = "RscWeaponZeroing";
+		class ItemInfo: InventoryOpticsItem_Base_F {
+			mass = 3;
+			modeloptics = "\A3\Weapons_F\empty";
+			optics = 1;
+			class OpticsModes {
+				class kobra {
+					cameradir = "";
+					distancezoommax = 200;
+					distancezoommin = 200;
+					memorypointcamera = "eye";
+					opticsdisableperipherialvision = 0;
+					opticsflare = 0;
+					opticsid = 1;
+					opticsppeffects[] = {"OpticsBlur1"};
+					opticszoominit = 0.75;
+					opticszoommax = 1.1;
+					opticszoommin = 0.375;
+					usemodeloptics = 0;
+					visionmode[] = {};
+				};
+			};
+		};
+	};
+	
+	class tb_acc_pso : optic_Hamr {
+		scope = 0;
+		displayName = "PSO-1M2";
+		descriptionshort = "PSO-1M2<br/>Magnification: 4x24";
+		weaponinfotype = "RscWeaponZeroing";
+		picture = "\tb_acc_optics\data\ico\w_pso_ca.paa";
+		model = "\tb_acc_optics\acc_pso";
+		class ItemInfo: InventoryOpticsItem_Base_F {
+			mass = 6;
+			modelOptics = "\tb_acc_optics\pso_optics";
+			class OpticsModes {
+				class PSO {
+					cameradir = "";
+					distancezoommax = 200;
+					distancezoommin = 200;
+					memorypointcamera = "opticView";
+					opticsdisableperipherialvision = 1;
+					opticsflare = 1;
+					opticsid = 1;
+					opticsppeffects[] = {};
+					opticszoominit = 0.0623;
+					opticszoommax = 0.0623;
+					opticszoommin = 0.0623;
+					usemodeloptics = 1;
+					visionmode[] = {"Normal"};
+				};
+				class Kolimator: PSO {
+					discretedistance[] = {};
+					discretedistanceinitindex = 0;
+					distancezoommax = 300;
+					distancezoommin = 300;
+					memorypointcamera = "eye";
+					opticsdisableperipherialvision = 0;
+					opticsflare = 0;
+					opticsid = 2;
+					opticsppeffects[] = {};
+					opticszoominit = 0.5;
+					opticszoommax = 1.1;
+					opticszoommin = 0.25;
+					usemodeloptics = 0;
+					visionmode[] = {};
+					weaponinfotype = "RscWeaponEmpty";
+				};
+			};
+		};
+	};
+	class optic_tws;
+	class tb_acc_goshawk : optic_tws {
+		scope = 0;
+		descriptionshort = "Goshawk Thermal Weapon Sight<br />Magnification: 3.4x";
+		displayname = "Goshawk TWS";
+		model = "\tb_acc_optics\acc_goshawk";
+		picture = "\tb_acc_optics\data\ico\w_goshawk_ca.paa";
+		weaponinfotype = "";
+		class ItemInfo: InventoryOpticsItem_Base_F {
+			mass = 8;
+			modeloptics = "\tb_acc_optics\TI_goshawk_optic";
+			optics = 1;
+			weaponinfotype = "";
+		};
+	
+	};	
 };
