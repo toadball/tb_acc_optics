@@ -1,10 +1,29 @@
 class CfgPatches {
 	class tb_acc_optics {
-		requiredaddons[] = {"A3_Weapons_F","A3_Weapons_F_Items"};
+		requiredaddons[] = {"A3_Weapons_F","A3_Weapons_F_Items","asdg_jointrails"};
 		requiredversion = 0.1;
 		units[] = {};
 		weapons[] = {"tb_acc_mk4CQT","tb_acc_m145","tb_acc_ta31","tb_acc_compM4","tb_acc_c79","tb_acc_kobra"};
 		magazines[] = {};
+	};
+};
+
+class asdg_OpticRail;
+class asdg_OpticSideMount: asdg_OpticRail {
+	class compatibleItems{
+		tb_acc_kobra = 1;
+		//tb_acc_pso = 1;
+		//tb_acc_goshawk = 1;
+	};
+};
+
+class asdg_OpticRail1913: asdg_OpticRail {
+	class compatibleItems {
+		//tb_acc_mk4CQT = 1;
+		tb_acc_ta31 = 1;
+		tb_acc_c79 = 1;
+		tb_acc_m145 = 1;
+		tb_acc_compM4 = 1;
 	};
 };
 

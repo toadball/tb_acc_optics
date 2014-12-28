@@ -1,7 +1,7 @@
-ambient[]={100,0.5,0.5,0.1};
-diffuse[]={1,0.5,0.5,0.1};
+ambient[]={100,0.5,0.5,0.80000001};
+diffuse[]={1,0.5,0.5,0.80000001};
 forcedDiffuse[]={10,2,2,0};
-emmisive[]={2.5,2.5,2.5,0.5};
+emmisive[]={2.5,2.5,2.5,0.89999998};
 specular[]={0,0,0,1};
 specularPower=1;
 renderFlags[]=
